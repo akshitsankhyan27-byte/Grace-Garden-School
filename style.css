@@ -1,98 +1,499 @@
-body {
-font-family: Arial;
-margin: 0;
+body{
+font-family:Arial;
+margin:0;
+background:#f2f2f2;
 }
 
-header {
-background: green;
-color: white;
-text-align: center;
-padding: 20px;
+header{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:25px;
 }
 
-nav {
-background: black;
-text-align: center;
+nav{
+background:#a31a1a;
+text-align:center;
+padding:15px;
 }
 
-nav a {
-color: white;
-padding: 10px;
-display: inline-block;
-text-decoration: none;
+nav a{
+color:white;
+margin:15px;
+font-size:18px;
+text-decoration:none;
 }
 
-nav a:hover {
-background: green;
+nav a:hover{
+color:yellow;
 }
 
-.hero {
-text-align: center;
-padding: 50px;
-background: lightgreen;
+section{
+background:white;
+margin:20px;
+padding:30px;
+border-radius:10px;
 }
 
-.btn {
-background: green;
-color: white;
-padding: 10px 20px;
-text-decoration: none;
+.gallery{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
 }
 
-.teacher-box {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+.gallery img{
+width:300px;
+border-radius:10px;
 }
 
-.teacher {
-margin: 10px;
-text-align: center;
+form input{
+display:block;
+margin:10px 0;
+padding:10px;
+width:300px;
 }
 
-.teacher img {
-width: 150px;
-height: 150px;
-border-radius: 50%;
+button{
+background:#2e7d32;
+color:white;
+border:none;
+padding:10px;
+cursor:pointer;
 }
 
-.gallery img {
-width: 200px;
-margin: 10px;
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
 }
 
-footer {
-background: black;
-color: white;
-text-align: center;
-padding: 10px;
+
+header h1{
+animation: slideDown 2s;
 }
 
-.slider {
-width: 100%;
-height: 400px;
-overflow: hidden;
+@keyframes slideDown{
+from{
+transform: translateY(-50px);
+opacity:0;
+}
+to{
+transform: translateY(0);
+opacity:1;
+}
 }
 
-.slides {
-display: flex;
-width: 400%; /* 4 images */
-height: 100%;
-animation: slide 12s infinite;
+section{
+animation: fadeIn 2s;
 }
 
-.slides img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-flex-shrink: 0;
+@keyframes fadeIn{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
 }
 
-/* Animation */
-@keyframes slide {
-0%   { transform: translateX(0); }
-25%  { transform: translateX(-100%); }
-50%  { transform: translateX(-200%); }
-75%  { transform: translateX(-300%); }
-100% { transform: translateX(0); }
+.gallery img{
+width:300px;
+border-radius:10px;
+transition:0.2s;
+}
+
+.gallery img:hover{
+transform:scale(1);
+}
+
+button{
+background:#2e7d32;
+color:white;
+border:none;
+padding:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#1b5e20;
+transform:scale(1.05);
+}
+
+
+.slider{
+width:100%;
+max-width:600px;
+margin:auto;
+overflow:hidden;
+}
+
+.slide{
+width:100%;
+display:none;
+border-radius:10px;
+}
+
+
+.admission{
+background:red;
+color:white;
+padding:10px;
+font-size:18px;
+}
+
+
+html{
+scroll-behavior:smooth;
+}
+
+
+
+
+body{
+font-family:Arial;
+margin:0;
+background:#f0f8ff;
+}
+
+/* Header */
+header{
+background:linear-gradient(90deg,#2e7d32,#4caf50);
+color:white;
+text-align:center;
+padding:25px;
+}
+
+/* Navigation Bar */
+nav{
+background:#1b5e20;
+text-align:center;
+padding:12px;
+}
+
+nav a{
+color:white;
+margin:15px;
+font-size:18px;
+text-decoration:none;
+padding:8px 15px;
+border-radius:5px;
+}
+
+nav a:hover{
+background:#4caf50;
+}
+
+/* Sections */
+section{
+background:white;
+margin:20px;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Facilities List */
+ul li{
+padding:5px;
+color:#333;
+}
+
+/* Admission Form */
+form input{
+display:block;
+width:300px;
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+background:#2e7d32;
+color:white;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#1b5e20;
+}
+
+/* Gallery */
+.gallery{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.gallery img{
+width:300px;
+border-radius:10px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* Contact Section */
+#contact{
+background:#e8f5e9;
+}
+
+/* Footer */
+footer{
+background:#1b5e20;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+/* Moving Admission Banner */
+.admission{
+background:red;
+color:white;
+padding:10px;
+font-size:18px;
+font-weight:bold;
+}
+
+
+
+/* Modern Hero Section */
+
+.hero{
+height:500px;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("images/school1.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.btn{
+background:#ff9800;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:5px;
+font-size:18px;
+}
+
+.btn:hover{
+background:#e68900;
+}
+
+
+@media(max-width:768px){
+
+.hero{
+height:350px;
+padding:20px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+}
+
+
+
+#admission form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+}
+
+#admission input,
+#admission select,
+#admission textarea{
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+#admission textarea{
+height:80px;
+}
+
+#admission button{
+background:#2e7d32;
+color:white;
+border:none;
+padding:12px;
+cursor:pointer;
+border-radius:5px;
+font-size:16px;
+}
+
+#admission button:hover{
+background:#1b5e20;
+}
+
+
+/* Admission Section Background */
+
+#admission{
+background:linear-gradient(135deg,#e8f5e9,#c8e6c9);
+padding:40px;
+border-radius:10px;
+}
+
+/* Form Box */
+
+#admission form{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+}
+
+/* Input Fields */
+
+#admission input,
+#admission select,
+#admission textarea{
+padding:10px;
+margin:8px 0;
+border-radius:5px;
+border:1px solid #ccc;
+font-size:14px;
+background:#f9f9f9;
+}
+
+/* Input Focus Effect */
+
+#admission input:focus,
+#admission select:focus,
+#admission textarea:focus{
+border-color:#4caf50;
+background:white;
+outline:none;
+}
+
+/* Submit Button */
+
+#admission button{
+background:#4caf50;
+color:white;
+border:none;
+padding:12px;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+transition:0.3s;
+}
+
+/* Button Hover */
+
+#admission button:hover{
+background:#2e7d32;
+transform:scale(1.03);
+}
+
+/* Slider */
+
+.slider{
+width:88%;
+height:400px;
+overflow:hidden;
+}
+
+.slides{
+display:flex;
+width:200%;
+animation:slide 12s infinite;
+}
+
+.slides img{
+width:90%;
+height:400px;
+object-fit:cover;
+}
+
+@keyframes slide{
+
+0%{margin-left:0;}
+
+35%{margin-left:0;}
+
+40%{margin-left:-100%;}
+
+70%{margin-left:-100%;}
+
+75%{margin-left:-200%;}
+
+100%{margin-left:-200%;}
+
+}
+.teacher img{
+width:300px;
+height:450px;
+object-fit:cover;
+margin:50px;
+border-radius:100px;
+}
+
+#login{
+padding:40px;
+text-align:center;
+background:#fff3e0;
+}
+
+.login-form{
+max-width:300px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.login-form input{
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.login-form button{
+padding:10px;
+background:#2196f3;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.login-form button:hover{
+background:#0b7dda;
 }

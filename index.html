@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grace Garden School</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Grace Garden School</h1>
+<p>Admissions Open 2026-27 | Classes Nursery  to 12th</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#facilities">Facilities</a>
+<a href="#admission">Admission</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+<a href="#teachers">Teachers</a>
+<a href="#login">Student Login</a>
+</nav>
+
+<section class="slider">
+
+<div class="slides">
+
+<img src="images/school1.jpg">
+<img src="images/school2.jpg">
+<img src="images/school3.jpg">
+<img src="images/logo.png">
+
+</div>
+
+</section>
+
+<section id="home">
+<h2>Welcome to Grace Garden School</h2>
+<p>We focus on quality education, discipline, and the overall development of students.</p>
+</section>
+
+<section id="about">
+<h2>About Our School</h2>
+<p>Grace Garden School provides a supportive learning environment where students grow academically and personally.</p>
+</section>
+
+<section id="facilities">
+<h2>School Facilities</h2>
+
+
+</div>
+
+</section>
+
+<ul>
+<li>Smart Classrooms</li>
+<li>Computer Lab</li>
+<li>Library</li>
+<li>Sports Activities</li>
+<li>Qualified Teachers</li>
+</ul>
+
+</section>
+
+<section id="teachers">
+
+<h2>Our Teachers</h2>
+
+<div class="teacher-box">
+<div class="teacher">
+    <img src="C:\Users\akshi\OneDrive\Pictures\Saved Pictures\IMG_5913.JPG">
+<h3>Mr. Suresh Kumar Sankhyan </h3>
+<p>Managing Director</p>
+</div>
+
+<div class="teacher">
+<img src="C:\Users\akshi\OneDrive\Pictures\Saved Pictures\IMG_5613.JPG">
+<h3>Mrs. Pawana Kumari</h3>
+<p>Principal</p>
+</div>
+
+<div class="teacher">
+<h3>Mr. Suman Kumari </h3>
+<p>Mathematics Teacher</p>
+</div>
+
+<div class="teacher">
+<h3>Mrs Manju</h3>
+<p>Science Teacher</p>
+</div>
+
+
+</script>
+
+
+
+
+</section>
+
+<section id="gallery">
+
+<h2>School Gallery</h2>
+
+<div class="gallery">
+
+<img src="images/ggs.jpg">
+<img src="images/image.jpg">
+<img src="images/logo.png">
+<img src="images/raspati.jpg">
+
+
+</div>
+
+</section>
+    <script>
+
+function sendToWhatsapp(){
+
+var name = document.getElementById("name").value;
+var studentClass = document.getElementById("class").value;
+var parent = document.getElementById("parent").value;
+var phone = document.getElementById("phone").value;
+
+var message =
+"New Admission Form:%0A"+
+"Student Name: "+name+"%0A"+
+"Class: "+studentClass+"%0A"+
+"Parent Name: "+parent+"%0A"+
+"Phone: "+phone;
+
+var whatsappURL =
+"https://wa.me/918219778399?text="+message;
+
+window.open(whatsappURL,"_blank");
+
+}
+
+</script>
+<section id="admission">
+
+<h2>Admission Form</h2>
+
+<form onsubmit="sendToWhatsapp(); return false;">
+
+<input type="text" id="name" placeholder="Student Name" required>
+
+<input type="text" id="class" placeholder="Class Applying For" required>
+
+<input type="text" id="parent" placeholder="Parent Name" required>
+
+<input type="tel" id="phone" placeholder="Phone Number" required>
+
+<button type="submit">Send Admission</button>
+
+</form>
+
+
+<section class="notice">
+<h2>Notice Board</h2>
+
+<ul>
+<li>Admissions Open 2026-27</li>
+<li>Annual Function in December</li>
+<li>Show smart class Regular day </li>
+<li>Sports Day August </li>
+
+</ul>
+</section>
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<p>📍 Grace Garden School</p>
+<p>📞 Phone: 98170-38905, 82197-78399</p>
+<p>📧 Email: akshitsankhyan27@gmail.com</p>
+<p>📌 Location: Near BDO Office Ghumarwin</p>
+
+
+
+
+<marquee class="admission">
+Admissions Open 2026-27 | Nursery to 12th | Limited Seats Available
+</marquee>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+<title>Grace Garden School</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<section id="home">
+
+</section>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Grace Garden School</h1>
+
+<p>Quality Education | Modern Learning | Bright Future</p>
+
+<a href="#admission" class="btn">Apply for Admission</a>
+
+</div>
+
+</section>
+
+<a href="student-login.html">Student Portal</a>
+
+</section>
+
+<footer>
+
+<p>Grace Garden School  | Thanks for visit over profile</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+<script>
+function sendToServer(){
+
+fetch("http://localhost:3000/admission", {
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify({
+name: document.getElementById("name").value,
+studentClass: document.getElementById("class").value,
+parent: document.getElementById("parent").value,
+phone: document.getElementById("phone").value
+})
+})
+.then(res => res.text())
+.then(data => {
+alert("Form Submitted Successfully");
+})
+.catch(err => console.log(err));
+
+}
+</script>
+
+
+<form onsubmit="sendToServer(); return false;"></form>

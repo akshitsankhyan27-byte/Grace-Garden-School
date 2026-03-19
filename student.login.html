@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Student Login Portal</h2>
+
+<input type="text" id="studentid" placeholder="Student ID">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<script>
+
+function login(){
+
+var id = document.getElementById("studentid").value;
+var pass = document.getElementById("password").value;
+
+if(id=="GGS101" && pass=="123"){
+window.location="student-dashboard.html";
+}
+else{
+alert("Invalid Student ID or Password");
+}
+
+}
+
+</script>
+
+</body>
+</html>
+
+
+<input type="text" id="studentid" placeholder="Student ID">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+
+
+
+<script>
+
+function login(){
+
+var id = document.getElementById("studentid").value;
+var pass = document.getElementById("password").value;
+
+if(id === "GGS101" && pass === "123"){
+window.location.href = "student-dashboard.html";
+}
+else{
+alert("Wrong Student ID or Password");
+}
+
+}
+
+</script>

@@ -68,37 +68,31 @@ text-align: center;
 padding: 10px;
 }
 
-/* Reset layout issues */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-/* Slider full width */
 .slider {
 width: 100%;
 height: 400px;
 overflow: hidden;
 }
 
-/* Ensure sections go BELOW slider */
-section {
-width: 100%;
-display: block;
-clear: both;   /* 🔥 IMPORTANT */
-padding: 40px;
-}
-
-/* Prevent side layout */
 .slides {
 display: flex;
+width: 400%; /* 4 images */
+height: 100%;
+animation: slide 12s infinite;
 }
 
-/* Fix image display */
 .slides img {
 width: 100%;
-height: 400px;
+height: 100%;
 object-fit: cover;
 flex-shrink: 0;
+}
+
+/* Animation */
+@keyframes slide {
+0%   { transform: translateX(0); }
+25%  { transform: translateX(-100%); }
+50%  { transform: translateX(-200%); }
+75%  { transform: translateX(-300%); }
+100% { transform: translateX(0); }
 }

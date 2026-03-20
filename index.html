@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Grace Garden School</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<header class="main-header">
 
-<body>
+<div class="logo-title">
+    <img src="images/logo.png" class="logo">
+    <div class="title-text">
+        <h1>Grace Garden School</h1>
+        <p>Admissions Open 2026–27 | Classes Nursery to 12th</p>
+    </div>
+</div>
 
-<header>
-<h1>Grace Garden School</h1>
-<p>Admissions Open 2026-27 | Classes Nursery  to 12th</p>
-</header>
 
-<nav>
-<a href="#home">Home</a>
+
+
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#facilities">Facilities</a>
 <a href="#admission">Admission</a>
@@ -21,16 +29,29 @@
 <a href="#contact">Contact</a>
 <a href="#teachers">Teachers</a>
 <a href="#login">Student Login</a>
-</nav>
+        </div>
+    </nav>
 
+
+    <script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+</header>
 <section class="slider">
 
 <div class="slides">
-
-<img src="images/school1.jpg">
-<img src="images/school2.jpg">
-<img src="images/school3.jpg">
-<img src="images/logo.png">
+ <img src="images/rasta1.jpeg" class="slideactive">
+ <img src="images/rasta2.jpeg" class="slide">
+<img src="images/school3.jpg"class="slide">
+<img src="images/school1.jpg"class="slide">
+<img src="images/school2.jpg"class="slide">
+<img src="images/rr.jpeg" class="slide">
+<img src="images/ncc.jpeg" class="slide">
+<img src="images/fun.jpeg" class="slide">
+<img src="images/logo.png" class="slide">
 
 </div>
 
@@ -38,7 +59,7 @@
 
 <section id="home">
 <h2>Welcome to Grace Garden School</h2>
-<p>We focus on quality education, discipline, and the overall development of students.</p>
+<p>Encouraging focusing on fresh beginning goal setting and a supportive community. It highlights Academy growth personal development and partnership between students teachers and parents.A new session is more than just a date on the calendar; it is a fresh page in your story a new chance for growth, learning, and success. As we begin this journey, I encourage you to look at the coming months as an opportunity to set new goals and challenge yourselves. </p>
 </section>
 
 <section id="about">
@@ -70,27 +91,66 @@
 
 <div class="teacher-box">
 <div class="teacher">
-    <img src="images/IMG_5913.JPG">
-<h3>Mr. Suresh Kumar Sankhyan </h3>
+ <img src="images/papa.jpeg">
+<h3>MR. SURESH KUMAR SANKHyan </h3>
 <p>Managing Director</p>
 </div>
 
 <div class="teacher">
 <img src="images/school5.jpeg">
-<h3>Mrs. Pawana Kumari</h3>
+<h3>MRS PAWANA KUMARI</h3>
 <p>Principal</p>
 </div>
 
 <div class="teacher">
-<h3>Mr. Suman Kumari </h3>
+<img src="images/suman.jpeg">
+<h3>MRS SUMAN KUMARI </h3>
 <p>Mathematics Teacher</p>
 </div>
 
 <div class="teacher">
 <img src="images/manju.jpg">
-<h3>Mrs Manju</h3>
+<h3>MRS MANJU </h3>
 <p>Science Teacher</p>
 </div>
+<div class="teacher">
+<img src="images/meena.jpeg">
+<h3>MRS. MEENA KUMARI </h3>
+<p>T G T ARTS</p>
+</div>
+<div class="teacher">
+<img src="images/ranu.jpeg">
+<h3>MRS. REENU KUMARI </h3>
+<p>D.M, D,ELED/JBT & DCA</p>
+</div>
+
+<div class="teacher">
+<img src="images/reenu.jpeg">
+<h3>MRS. REENU KUMARI </h3>
+<p>SANSKRIT TEACHER</p>
+</div>
+<div class="teacher">
+<img src="images/sarita.jpeg">
+<h3>MRS. SARITA DEVI</h3>
+<p>D.M AND DEL.ED.</p>
+</div>
+
+<div class="teacher">
+<img src="images/savita.jpeg">
+<h3>MRS. SAVITA DEVI</h3>
+<p>N.T.T</p>
+</div>
+
+<div class="teacher">
+<img src="images/lata.jpeg">
+<h3>MRS. LATA DEVI</h3>
+<p>TGT ARTS LANGUAGE TEACHER</p>
+</div>
+
+
+
+
+
 
 
 </script>
@@ -105,11 +165,16 @@
 <h2>School Gallery</h2>
 
 <div class="gallery">
-
-<img src="images/ggs.jpg">
-<img src="images/image.jpg">
+<img src="images/rasta1.jpeg">
+<img src="images/rasta2.jpeg">
+<img src="images/fun.jpeg">
+<img src="images/rr.jpeg">
+<img src="images/ncc.jpeg">
+<img src="images/n.jpeg">
+<img src="images/school1.jpg">
+<img src="images/school2.jpg">
 <img src="images/logo.png">
-<img src="images/raspati.jpg">
+<img src="images/school3.jpg">
 
 
 </div>
@@ -259,3 +324,24 @@ alert("Form Submitted Successfully");
 
 
 <form onsubmit="sendToServer(); return false;"></form>
+
+
+
+
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide() {
+    slides.forEach((slide) => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+
+    index = (index + 1) % slides.length;
+}
+
+setInterval(showSlide, 3000); // change every 3 seconds
+</script>
+
+
+
